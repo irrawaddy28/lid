@@ -1,0 +1,3 @@
+LANG L
+ENG E
+MUS M

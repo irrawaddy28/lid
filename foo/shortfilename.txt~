@@ -1,0 +1,3 @@
+grep -E "arabic_141120_374627"    exp/language_id_train_arabic/tlang_logprob |tr ' ' '\n'|wc -l
+895
+
