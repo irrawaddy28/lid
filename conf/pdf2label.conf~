@@ -1,6 +1,0 @@
-; pdf ids of the hmm are on col 1
-; class labels are on col 2
-; class label = 1 (target language), -1 (English), -2 (Music)
-0  1   100
-1  -1  -10	
-2  -2  -20
