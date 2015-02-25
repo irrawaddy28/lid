@@ -17,10 +17,10 @@ olang1_prior=0.25  # prior prob. that english speech is present in an utterance
 olang2_prior=0.05  # prior prob. that music is present in an utterance
 # target languages: all languages present in www.sbs.com.au/ 
 desired_lang="albanian  bangla   cookislands-maori  dinka     finnish   hebrew      italian   kurdish     malay      norwegian      punjabi   sinhalese  swahili   tongan
-#amharic   bosnian    croatian    dutch     french    hindi       japanese  lao         malayalam  pashto         romanian  slovak     swedish   turkish
-#arabic    bulgarian  czech    estonian  german    hmong       kannada   latvian     maltese    persian-farsi  russian   slovenian  tamil     ukrainian
-#armenian  burmese    danish   fijian    greek     hungarian   khmer     lithuanian  mandarin   polish         samoan    somali     thai      urdu
-#assyrian  cantonese  dari    filipino  gujarati  indonesian  korean    macedonian  nepali     portuguese     serbian   spanish    tigrinya  vietnamese"
+amharic   bosnian    croatian    dutch     french    hindi       japanese  lao         malayalam  pashto         romanian  slovak     swedish   turkish
+arabic    bulgarian  czech    estonian  german    hmong       kannada   latvian     maltese    persian-farsi  russian   slovenian  tamil     ukrainian
+armenian  burmese    danish   fijian    greek     hungarian   khmer     lithuanian  mandarin   polish         samoan    somali     thai      urdu
+assyrian  cantonese  dari    filipino  gujarati  indonesian  korean    macedonian  nepali     portuguese     serbian   spanish    tigrinya  vietnamese"
 #desired_lang="arabic"
 # impostor languages: english and music
 other_lang="english  music"
