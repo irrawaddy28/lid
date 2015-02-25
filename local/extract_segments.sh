@@ -22,7 +22,7 @@ if [ -f path.sh ]; then . ./path.sh; fi
 . parse_options.sh || exit 1;
 
 
-if [ $# != 4 ]; then
+if [ $# != 3 ]; then
   echo "Usage: $0 "
   echo " e.g.: $0  "
   echo "main options (for others, see top of script file)"  
@@ -65,11 +65,11 @@ create-split-from-vld --max-voiced=$max_seg_length "ark,t:$dir/vld" -| \
 export segwav_dir; 
 awk '{print $1}' $dir/segments| \
 perl -ne '$key=$lang=$_; chomp $lang; chomp $key; $lang =~ s/(.*?)_(.*)/$1/; $langdir = $ENV{segwav_dir}."/".$lang; +
-		  unlink glob "$langdir/*.*"; mkdir $langdir; $fname = $langdir."/".$2.".wav"; print "$key   $fname\n";' > $data/seg.scp
+		  unlink glob "$langdir/*.*"; mkdir $langdir; $fname = $langdir."/".$2.".wav"; print "$key   $fname\n";' > $dir/seg.scp
 
 # now generate the segments
 $cmd JOB=1 $dir/log/extract-segments.JOB.log \
-extract-segments "scp,p:$data/wav.scp"  $dir/segments  "scp:$data/seg.scp" || exit 1;
+extract-segments "scp,p:$data/wav.scp"  $dir/segments  "scp:$dir/seg.scp" || exit 1;
 
 exit 0;
 

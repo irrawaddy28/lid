@@ -10,18 +10,18 @@
 [[ -f cmd.sh ]] && . ./cmd.sh || { echo "cmd.sh does not exist"; exit 1; }
 
 # settings that user can modify
-max_seg_length=500 # max length of the segmented wav files of the target language (500 frames = 5 secs for a skip rate of 10ms)
+max_seg_length=500 # max length, in number of frames, of the segmented wav files of the target language (500 frames = 5 secs for a skip rate of 10ms)
 segwav_dir=$corpus_dir/www.sbs.com.au/seg2 # dir where you want to store the segmented wav files
 tlang_prior=0.7    # prior prob. that a target lang speech is present in an utterance
 olang1_prior=0.25  # prior prob. that english speech is present in an utterance
 olang2_prior=0.05  # prior prob. that music is present in an utterance
 # target languages: all languages present in www.sbs.com.au/ 
-#desired_lang="albanian  bangla   cookislands-maori  dinka     finnish   hebrew      italian   kurdish     malay      norwegian      punjabi   sinhalese  swahili   tongan
+desired_lang="albanian  bangla   cookislands-maori  dinka     finnish   hebrew      italian   kurdish     malay      norwegian      punjabi   sinhalese  swahili   tongan
 #amharic   bosnian    croatian    dutch     french    hindi       japanese  lao         malayalam  pashto         romanian  slovak     swedish   turkish
 #arabic    bulgarian  czech    estonian  german    hmong       kannada   latvian     maltese    persian-farsi  russian   slovenian  tamil     ukrainian
 #armenian  burmese    danish   fijian    greek     hungarian   khmer     lithuanian  mandarin   polish         samoan    somali     thai      urdu
 #assyrian  cantonese  dari    filipino  gujarati  indonesian  korean    macedonian  nepali     portuguese     serbian   spanish    tigrinya  vietnamese"
-desired_lang="arabic"
+#desired_lang="arabic"
 # impostor languages: english and music
 other_lang="english  music"
 
@@ -129,6 +129,13 @@ do
 done
 wait
 echo "Done all language ids"
+
+# segment the wav files into chunks of contiguous frames of the target language id. 
+for l in `echo $desired_lang`
+do
+local/extract_segments.sh --cmd "$train_cmd" --nj 1 --max-seg-length $max_seg_length data/train_${l} $segwav_dir exp/language_id_train_${l}/${vldtype}
+done
+
 fi
 
 if [ $stage -eq 8 ]; then
@@ -171,12 +178,19 @@ do
 done
 wait
 echo "Done all language ids"
-fi
 
-if [ $stage -eq 9 ]; then
-# segment the wav files into chunks where contiguous frames of the target language id has been detected. 
+# segment the wav files into chunks of contiguous frames of the target language id. 
 for l in `echo $desired_lang`
 do
 local/extract_segments.sh --cmd "$train_cmd" --nj 1 --max-seg-length $max_seg_length data/train_${l} $segwav_dir exp/language_id_train_${l}/${vldtype}
-done  
+done
+
 fi
+
+#if [ $stage -eq 9 ]; then
+## segment the wav files into chunks where contiguous frames of the target language id has been detected. 
+#for l in `echo $desired_lang`
+#do
+#local/extract_segments.sh --cmd "$train_cmd" --nj 1 --max-seg-length $max_seg_length data/train_${l} $segwav_dir exp/language_id_train_${l}/${vldtype}
+#done  
+#fi
