@@ -22,7 +22,7 @@ if [ -f path.sh ]; then . ./path.sh; fi
 . parse_options.sh || exit 1;
 
 
-if [ $# != 3 ]; then
+if [ $# != 4 ]; then
   echo "Usage: $0 "
   echo " e.g.: $0  "
   echo "main options (for others, see top of script file)"  

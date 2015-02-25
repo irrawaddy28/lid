@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Copyright    2013  Daniel Povey
-#              2014  David Snyder				
+# Copyright    2015  SST Lab
+#              
 # Apache 2.0.
 
 # This script gets language-id information for a set of utterances.
@@ -30,8 +30,8 @@ if [ -f path.sh ]; then . ./path.sh; fi
 
 
 if [ $# != 6 ]; then
-  echo "Usage: $0 <gender-independent-ubm-dir> <male-ubm-dir> <female-ubm-dir> <data> <exp-dir>"
-  echo " e.g.: $0  exp/ubm_2048 exp/ubm_2048_male exp/ubm_2048_female data/test exp/test_gender"
+  echo "Usage: $0 <language-independent-ubm-dir> <targetlang-ubm-dir> <english-ubm-dir> <music-ubm-dir> <data> <exp-dir>"
+  echo " "
   echo "main options (for others, see top of script file)"
   echo "  --config <config-file>                           # config containing options"
   echo "  --cmd (utils/run.pl|utils/queue.pl <queue opts>) # how to run jobs."
@@ -61,12 +61,13 @@ dir=$6
 
 echo -e "1=$1\n2=$2\n3=$3\n4=$4\n5=$5\n6=$6";
 
+# $ubmdir/delta_opts should already be present as a result of running sid/train_full_ubm.sh
 delta_opts=`cat $ubmdir/delta_opts 2>/dev/null`
-if [ -f $ubmdir/delta_opts ]; then
-  cp $ubmdir/delta_opts $tlang_ubmdir/ 2>/dev/null
-  cp $ubmdir/delta_opts $olang1_ubmdir/ 2>/dev/null
-  cp $ubmdir/delta_opts $olang2_ubmdir/ 2>/dev/null
-fi
+#if [ -f $ubmdir/delta_opts ]; then
+#  cp $ubmdir/delta_opts $tlang_ubmdir/ 2>/dev/null
+#  cp $ubmdir/delta_opts $olang1_ubmdir/ 2>/dev/null
+#  cp $ubmdir/delta_opts $olang2_ubmdir/ 2>/dev/null
+#fi
 
 for f in $ubmdir/final.ubm $tlang_ubmdir/final.ubm $olang1_ubmdir/final.ubm $olang2_ubmdir/final.ubm  $data/feats.scp $data/vad.scp; do
   [ ! -f $f ] && echo "No such file $f" && exit 1;
@@ -118,45 +119,46 @@ if ! [ $nj -eq $(cat $dir/num_jobs) ]; then
   exit 1;
 fi
 
+mkdir -p $dir/gmm
 
 if [ $stage -le 0 ]; then
   $cmd JOB=1:$nj $dir/log/get_tlang_logprob.JOB.log \
     fgmm-global-get-frame-likes --average=false \
      "--gselect=ark,s,cs:gunzip -c $dir/gselect.JOB.gz|" $tlang_ubmdir/final.ubm \
-      "$feats" ark,t:$dir/tlang_logprob.JOB || exit 1;
+      "$feats" ark,t:$dir/gmm/tlang_logprob.JOB || exit 1;
 fi
 if [ $stage -le 1 ]; then
   $cmd JOB=1:$nj $dir/log/get_olang1_logprob.JOB.log \
     fgmm-global-get-frame-likes --average=false \
      "--gselect=ark,s,cs:gunzip -c $dir/gselect.JOB.gz|" $olang1_ubmdir/final.ubm \
-      "$feats" ark,t:$dir/olang1_logprob.JOB || exit 1;
+      "$feats" ark,t:$dir/gmm/olang1_logprob.JOB || exit 1;
 fi
 if [ $stage -le 1 ]; then
   $cmd JOB=1:$nj $dir/log/get_olang2_logprob.JOB.log \
     fgmm-global-get-frame-likes --average=false \
      "--gselect=ark,s,cs:gunzip -c $dir/gselect.JOB.gz|" $olang2_ubmdir/final.ubm \
-      "$feats" ark,t:$dir/olang2_logprob.JOB || exit 1;
+      "$feats" ark,t:$dir/gmm/olang2_logprob.JOB || exit 1;
 fi
 
 
 if [ $stage -le 2 ]; then
 
-  for j in $(seq $nj); do cat $dir/tlang_logprob.$j; done > $dir/tlang_logprob
-  for j in $(seq $nj); do cat $dir/olang1_logprob.$j; done > $dir/olang1_logprob
-  for j in $(seq $nj); do cat $dir/olang2_logprob.$j; done > $dir/olang2_logprob
+  for j in $(seq $nj); do cat $dir/gmm/tlang_logprob.$j; done > $dir/gmm/tlang_logprob
+  for j in $(seq $nj); do cat $dir/gmm/olang1_logprob.$j; done > $dir/gmm/olang1_logprob
+  for j in $(seq $nj); do cat $dir/gmm/olang2_logprob.$j; done > $dir/gmm/olang2_logprob
 
-  n1=$(cat $dir/tlang_logprob | wc -l)
-  n2=$(cat $dir/olang1_logprob | wc -l)
-  n3=$(cat $dir/olang2_logprob | wc -l)
+  n1=$(cat $dir/gmm/tlang_logprob | wc -l)
+  n2=$(cat $dir/gmm/olang1_logprob | wc -l)
+  n3=$(cat $dir/gmm/olang2_logprob | wc -l)
 
   if [ $n1 -ne $n2 ] || [ $n1 -ne $n3 ]; then
     echo "Number of lines mismatch, target versus other language UBM probs: $n1 vs $n2 vs $n3"
     exit 1;
   fi
   
-  sed -i 's:\[\|\]: :g' $dir/tlang_logprob
-  sed -i 's:\[\|\]: :g' $dir/olang1_logprob
-  sed -i 's:\[\|\]: :g' $dir/olang2_logprob
+  sed -i 's:\[\|\]: :g' $dir/gmm/tlang_logprob
+  sed -i 's:\[\|\]: :g' $dir/gmm/olang1_logprob
+  sed -i 's:\[\|\]: :g' $dir/gmm/olang2_logprob
   
   #paste $dir/tlang_logprob $dir/olang1_logprob $dir/olang2_logprob | \
     #awk '{if ($1 != $3 || $1 != $5) { print >/dev/stderr "Sorting mismatch"; exit(1);  } print $1, $2, $4, $6;}' \
@@ -165,10 +167,10 @@ if [ $stage -le 2 ]; then
   #cat $dir/logprob | \
    #awk -v ptlang=$tlang_prior -v polang1=$olang1_prior -v  polang2=$olang2_prior  '{ a1 = log(ptlang/polang1) + $2 - $3; a2 = log(ptlang/polang2) + $2 - $4; post_a = 1/(1 + exp(-a1) + exp(-a2));  b1 = log(polang1/ptlang) + $3 - $2;  b2 = log(polang1/polang2) + $3 - $4; post_b = 1/(1 + exp(-b1) + exp(-b2)); print $1, post_a, post_b, 1 - post_a - post_b}' \
     #>$dir/ratio || exit 1;     
-    
-  perl sid/get_best_langid_perframe.pl $dir/tlang_logprob $tlang_prior $dir/olang1_logprob $olang1_prior $dir/olang2_logprob $olang2_prior > $dir/best_lang
+  
+  perl sid/get_best_langid_perframe.pl $dir/gmm/tlang_logprob $tlang_prior $dir/gmm/olang1_logprob $olang1_prior $dir/gmm/olang2_logprob $olang2_prior > $dir/gmm/frame_labels
    
-  merge-vad-with-frame-labels "scp:$data/vad.scp" "ark,t:$dir/best_lang" "ark,t:$dir/vld"
+  merge-vad-with-frame-labels "scp:$data/vad.scp" "ark,t:$dir/gmm/frame_labels" "ark,t:$dir/gmm/vld" || exit 1;
    
 fi
 

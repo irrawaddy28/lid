@@ -70,8 +70,8 @@ if [[ ! -s $lang/tmp/LG.fst || $lang/tmp/LG.fst -ot $lang/G.fst || \
   fsttablecompose $lang/L_disambig.fst $lang/G.fst | fstdeterminizestar --use-log=true | \
     fstminimizeencoded  > $lang/tmp/LG.fst || exit 1;
   fstisstochastic $lang/tmp/LG.fst || echo "[info]: LG not stochastic."
-  # uncomment to view the fst table
-  # fstprint --isymbols=$lang/phones.txt --osymbols=$lang/words.txt  lang/tmp/LG.fst
+  # save the fst table in txt format
+  fstprint --isymbols=$lang/phones.txt --osymbols=$lang/words.txt  lang/tmp/LG.fst lang/tmp/LG.txt.fst
 fi
 
 clg=$lang/tmp/CLG_${N}_${P}.fst
@@ -116,24 +116,14 @@ if [[ ! -s $dir/HCLG.fst || $dir/HCLG.fst -ot $dir/HCLGa.fst ]]; then
   fi
 fi
 
+# cp words.txt to $dir since this will be used during decoding
+cp $lang/words.txt $dir 
+ 
 #Visual check
 fstmaketidsyms $lang/phones.txt $model > $dir/tids.txt
-fstprint -isymbols=$dir/tids.txt  -osymbols=$lang/words.txt $dir/HCLG.fst
+fstprint -isymbols=$dir/tids.txt  -osymbols=$lang/words.txt $dir/HCLG.fst  $dir/HCLG.txt.fst
+
 exit 1;
-# keep a copy of the lexicon and a list of silence phones with HCLG...
-# this means we can decode without reference to the $lang directory.
 
 
-cp $lang/words.txt $dir/ || exit 1;
-mkdir -p $dir/phones
-cp $lang/phones/word_boundary.* $dir/phones/ 2>/dev/null # might be needed for ctm scoring,
-cp $lang/phones/align_lexicon.* $dir/phones/ 2>/dev/null # might be needed for ctm scoring,
-  # but ignore the error if it's not there.
-
-cp $lang/phones/disambig.{txt,int} $dir/phones/ 2> /dev/null
-cp $lang/phones/silence.csl $dir/phones/ || exit 1;
-cp $lang/phones.txt $dir/ 2> /dev/null # ignore the error if it's not there.
-
-# to make const fst:
-# fstconvert --fst_type=const $dir/HCLG.fst $dir/HCLG_c.fst
 

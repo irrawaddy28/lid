@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 #
 # Given log likelihood scores for 3 classes p(x_t|lambda_1), p(x_t|lambda_2), p(x_t|lambda_3)
-# evaluated for feature vector x_t at time t, this routine calculates the posteriors
-# for each class and determines the best class in every frame.
+# evaluated for feature vector x_t at time t=1,...,T, this routine calculates the posteriors
+# for each class and determines the best class in each frame.
 # Best class at frame t = argmax p (lambda j | x_t) = argmax p (x_t|lambda j) p (j) 
 #						  lambda					  lambda
 # p(j) is the prior of class j and is an input argument to this routine.
@@ -30,13 +30,10 @@
 # Date 				Author 					Description of Change
 # 02/03/15			ad 						Created 
 #
-# USAGE:
-# perl get_best_langid_perframe.pl <L1 log like file> <L1 prior> <L2 log like file> <L2 prior> <L3 log like file> <L3 prior>
-#
-# e.g. perl $0 L1_loglikes_perframe 0.6 L2_loglikes_perframe 0.3  L3_loglikes_perframe 0.1 > best_langid_perframe.txt
 # ====================================================================
 
-$USAGE = "USAGE\n:perl $0 L1_loglikes_perframe 0.6 L2_loglikes_perframe 0.3  L3_loglikes_perframe 0.1 > best_langid_perframe.txt \n"; 
+$USAGE = "USAGE\n: perl $0 <L1 log like file> <L1 prior> <L2 log like file> <L2 prior> <L3 log like file> <L3 prior>\n\n 
+		  Example\n: perl $0 L1_loglikes_perframe 0.6 L2_loglikes_perframe 0.3  L3_loglikes_perframe 0.1 > best_langid_perframe.txt \n"; 
  
 use File::Basename;
 
