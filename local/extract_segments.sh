@@ -38,7 +38,7 @@ data=$1
 segwav_dir=$2
 dir=$3
 
-echo -e "1=$1\n2=$2\n3=$3";
+#echo -e "1=$1\n2=$2\n3=$3";
 
 [[ ! -d $data ]] && echo "No such directory $data" && exit 1;
 [[ ! -d $dir ]] && echo "No such directory $dir" && exit 1;

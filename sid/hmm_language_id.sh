@@ -49,7 +49,7 @@ data=$6
 lang=$7
 dir=$8
 
-echo -e "1=$1\n2=$2\n3=$3\n4=$4\n5=$5\n6=$6\n7=$7\n8=$8";
+#echo -e "1=$1\n2=$2\n3=$3\n4=$4\n5=$5\n6=$6\n7=$7\n8=$8";
 
 for f in ${tlang_ubmdir}/final.ubm ${olang1_ubmdir}/final.ubm ${olang2_ubmdir}/final.ubm $transmdl $tree $data/feats.scp $data/vad.scp; do
   [ ! -f $f ] && echo "No such file $f" && exit 1;
@@ -74,6 +74,7 @@ fgmm-global-to-gmm --binary=false ${tlang_ubmdir}/final.ubm ${tlang_ubmdir}/fina
 # Merge: target lang diag ubm + other langs diag ubms + transition model = HMM
 numgmms=3
 hmm=$dir/hmm/final.mdl
+rm -rf $dir/hmm 2>/dev/null
 mkdir -p $dir/hmm
 echo ${delta_opts} > $dir/hmm/delta_opts
 echo "<DIMENSION> ${feat_dim} <NUMPDFS> $numgmms "|\
@@ -84,7 +85,7 @@ local/mkgraph_HCLG.sh --mono --loop-scale 1 $lang $tree $hmm $dir/hmm
 
 # Decode and generate alignments
 local/decode.sh --nj "$nj" --cmd "$decode_cmd" --skip-scoring "true" \
-                --lattice-beam 2.0 $dir/hmm $data $dir/hmm/decode
+                --lattice-beam 0.5 --determinize-lattice "false" $dir/hmm $data $dir/hmm/decode
 
 # Convert ali to pdf                
 $decode_cmd JOB=1:$nj $dir/log/ali2pdf.JOB.log \

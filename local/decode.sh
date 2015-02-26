@@ -21,6 +21,7 @@ scoring_opts=
 # note: there are no more min-lmwt and max-lmwt options, instead use
 # e.g. --scoring-opts "--min-lmwt 1 --max-lmwt 20"
 skip_scoring=false
+determinize_lattice=true
 # End configuration section.
 
 echo "$0 $@"  # Print the command line for logging
@@ -51,6 +52,7 @@ if [ $# != 3 ]; then
    echo "  --parallel-opts <opts>                           # e.g. '-pe smp 4' if you supply --num-threads 4"
    echo "  --skip-scoring  <bool|f>							# skip scoring if set to true"
    echo "  --lattice-beam  <float|6.0>						# lattice beam width"
+   echo "  --determinize-lattice <bool|t>                   # whether or not to determinize o/p lattice "
    exit 1;
 fi
 
@@ -100,7 +102,7 @@ fi
 
 if [ $stage -le 0 ]; then
   $cmd $parallel_opts JOB=1:$nj $dir/log/decode.JOB.log \
-    gmm-latgen-faster$thread_string --max-active=$max_active --beam=$beam --lattice-beam=$lattice_beam \
+    gmm-latgen-faster$thread_string --max-active=$max_active --beam=$beam --lattice-beam=$lattice_beam --determinize-lattice=$determinize_lattice\
     --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
     $model $graphdir/HCLG.fst "$feats" "ark,t:|gzip -c > $dir/lat.JOB.gz"\
     "ark,t:|gzip -c > $dir/word.JOB.gz" "ark,t:|gzip -c > $dir/ali.JOB.gz" || exit 1;
