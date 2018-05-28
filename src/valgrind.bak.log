@@ -1,0 +1,16 @@
+for x in base matrix util feat tree thread gmm transform sgmm fstext hmm lm decoder lat nnet bin fstbin gmmbin fgmmbin sgmmbin featbin nnetbin latbin sgmm2 nnet2 nnet2bin sgmm2bin kwsbin ivector ivectorbin online2 online2bin lmbin; do make -C $x valgrind || { echo "valgrind on $x failed"; exit 1; }; done
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/base'
+echo -n > valgrind.out
+for x in kaldi-math-test io-funcs-test kaldi-error-test timer-test; do echo $x>>valgrind.out; valgrind ./$x >/dev/null 2>> valgrind.out; done
+! ( grep 'ERROR SUMMARY' valgrind.out | grep -v '0 errors' )
+! ( grep 'definitely lost' valgrind.out | grep -v -w 0 )
+rm valgrind.out
+touch .valgrind
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/base'
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/matrix'
+echo -n > valgrind.out
+for x in matrix-lib-test kaldi-gpsr-test ; do echo $x>>valgrind.out; valgrind ./$x >/dev/null 2>> valgrind.out; done
+! ( grep 'ERROR SUMMARY' valgrind.out | grep -v '0 errors' )
+==18619== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/matrix'
+valgrind on matrix failed

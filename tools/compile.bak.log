@@ -1,0 +1,619 @@
+extras/check_dependencies.sh
+/bin/sh is linked to dash, and currently some of the scripts will not run
+properly.  We recommend to run:
+ sudo ln -s -f bash /bin/sh
+cd irstlm; \
+	    automake --version | grep 1.13.1 >/dev/null && \
+         sed s:AM_CONFIG_HEADER:AC_CONFIG_HEADERS: <configure.in >configure.ac; \
+	(./regenerate-makefiles.sh || ./regenerate-makefiles.sh) && \
+	./configure --prefix `pwd` 
+Calling /usr/bin/libtoolize 
+Calling /usr/bin/aclocal...
+Calling /usr/bin/autoconf...
+Calling /usr/bin/automake --add-missing...
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for g++... g++
+checking whether the C++ compiler works... yes
+checking for C++ compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking for style of include used by make... GNU
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking how to print strings... printf
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking dependency style of gcc... gcc3
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 3458764513820540925
+checking whether the shell understands some XSI constructs... yes
+checking whether the shell understands "+="... yes
+checking how to convert x86_64-unknown-linux-gnu file names to x86_64-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/bin/ld -m elf_x86_64
+checking if the linker (/usr/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for pdflatex... pdflatex
+checking for bibtex... bibtex
+configure: trace disabled (default), most regression tests will fail
+configure: generation of debugging symbols disabled (default), compilation without "-g", only "-O2"
+configure: profiling disabled (default)
+configure: train-caching disabled (default)
+configure: caching disabled (default)
+configure: interpolated search disabled (default)
+configure: optimization disabled (default)
+configure: Building non-threaded irstlm.
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating scripts/Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: The software will be installed into /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm
+cd irstlm/; \
+	make; make install	
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make  all-recursive
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+Making all in src
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/src'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/src'
+Making all in scripts
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/scripts'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/scripts'
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+Making install in src
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/src'
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/src'
+ /bin/mkdir -p '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libirstlm.la '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib'
+libtool: install: /usr/bin/install -c .libs/libirstlm.lai /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib/libirstlm.la
+libtool: install: /usr/bin/install -c .libs/libirstlm.a /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib/libirstlm.a
+libtool: install: chmod 644 /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib/libirstlm.a
+libtool: install: ranlib /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib/libirstlm.a
+libtool: finish: PATH="/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/egs/SBS-mul/utils/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sph2pipe_v2.5/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/bin:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/bin:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fstbin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/gmmbin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/featbin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lm/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmmbin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm2bin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fgmmbin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/latbin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnetbin:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet2bin/:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/kwsbin:/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/egs/SBS-mul:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/export/ws15-pt-data/python-3.4.3/bin:/sbin" ldconfig -n /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,-rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+ /bin/mkdir -p '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin'
+  /bin/bash ../libtool   --mode=install /usr/bin/install -c dict ngt dtsel compile-lm interpolate-lm prune-lm quantize-lm prune-lm score-lm tlm plsa verify-caching '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin'
+libtool: install: /usr/bin/install -c dict /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/dict
+libtool: install: /usr/bin/install -c ngt /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/ngt
+libtool: install: /usr/bin/install -c dtsel /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/dtsel
+libtool: install: /usr/bin/install -c compile-lm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/compile-lm
+libtool: install: /usr/bin/install -c interpolate-lm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/interpolate-lm
+libtool: install: /usr/bin/install -c prune-lm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/prune-lm
+libtool: install: /usr/bin/install -c quantize-lm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/quantize-lm
+libtool: install: /usr/bin/install -c prune-lm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/prune-lm
+libtool: install: /usr/bin/install -c score-lm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/score-lm
+libtool: install: /usr/bin/install -c tlm /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/tlm
+libtool: install: /usr/bin/install -c plsa /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/plsa
+libtool: install: /usr/bin/install -c verify-caching /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin/verify-caching
+ /bin/mkdir -p '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/include'
+ /usr/bin/install -c -m 644 cmd.h dictionary.h gzfilebuf.h htable.h index.h lmContainer.h lmclass.h lmmacro.h lmtable.h lmInterpolation.h mempool.h mfstream.h n_gram.h ngramcache.h ngramtable.h timer.h util.h interplm.h linearlm.h mdiadapt.h mixture.h normcache.h shiftlm.h cplsa.h doc.h '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/include'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/src'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/src'
+Making install in scripts
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/scripts'
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/scripts'
+make[3]: Nothing to be done for `install-exec-am'.
+ /bin/mkdir -p '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin'
+ /usr/bin/install -c add-start-end.sh build-lm-qsub.sh build-lm.sh rm-start-end.sh split-ngt.sh mdtsel.sh build-sublm.pl goograms2ngrams.pl lm-stat.pl merge-sublm.pl ngram-split.pl sort-lm.pl split-dict.pl '/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/bin'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/scripts'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm/scripts'
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[3]: Nothing to be done for `install-exec-am'.
+make[3]: Nothing to be done for `install-data-am'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/irstlm'
+tar xojf sctk-2.4.9-20141015-1634Z.tar.bz2
+rm -rf sctk && ln -s sctk-2.4.9 sctk
+cd sctk; make config
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+(mkdir -p bin)
+(cd src; make config)
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src'
+(cd asclite; make config)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite'
+(cd core; sh config.sh -prefix=`cd ../../..; pwd`)
+checking for g++... g++
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking for main in -lm... yes
+checking how to run the C preprocessor... gcc -E
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for unistd.h... (cached) yes
+checking for string.h... (cached) yes
+checking iostream usability... no
+checking iostream presence... no
+checking for iostream... no
+checking ostream usability... no
+checking ostream presence... no
+checking for ostream... no
+checking fstream usability... no
+checking fstream presence... no
+checking for fstream... no
+checking iomanip usability... no
+checking iomanip presence... no
+checking for iomanip... no
+checking map usability... no
+checking map presence... no
+checking for map... no
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for stdlib.h... (cached) yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking list usability... no
+checking list presence... no
+checking for list... no
+checking vector usability... no
+checking vector presence... no
+checking for vector... no
+checking set usability... no
+checking set presence... no
+checking for set... no
+checking assert.h usability... yes
+checking assert.h presence... yes
+checking for assert.h... yes
+checking sstream usability... no
+checking sstream presence... no
+checking for sstream... no
+checking float.h usability... yes
+checking float.h presence... yes
+checking for float.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for install... /usr/bin/install
+config.sh: creating ./config.status
+config.status: creating makefile
+(cd test; sh config.sh -prefix=`cd ../../..; pwd`)
+checking for g++... g++
+checking for C++ compiler default output file name... a.out
+checking whether the C++ compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether make sets $(MAKE)... yes
+checking for gcc... gcc
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking for main in -lm... yes
+checking how to run the C preprocessor... gcc -E
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for install... /usr/bin/install
+config.sh: creating ./config.status
+config.status: creating makefile
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite'
+(cd sclite; sh config.sh -prefix=`cd ../..; pwd`)
+loading cache ./config.cache
+checking for gcc... (cached) gcc
+checking whether we are using GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking whether make sets ${MAKE}... (cached) yes
+checking for -lm... (cached) yes
+checking how to run the C preprocessor... (cached) gcc -E
+checking whether cross-compiling... (cached) no
+checking for ANSI C header files... (cached) yes
+checking for unistd.h... (cached) yes
+checking for working const... (cached) yes
+checking for size_t... (cached) yes
+checking for install... (cached) /usr/bin/install
+Checking installation site
+creating ./config.status
+creating makefile
+(cd rfilter1; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)
+(cd csrfilt; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd chfilt; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd hamzaNorm; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd tanweenFilt; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd acomp; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd def_art; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd hubscr; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd utf_filt; sh config.sh -prefix=`cd ../..; pwd`)
+checking for nsgmls... no
+checking for onsgmls... no
+config.sh: creating ./config.status
+config.status: creating makefile
+(cd rttmSort; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd rttmSmooth; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd rttm2ctm; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd spkr2sad; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd mergectm2rttm; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd align2html; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd md-eval; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)	
+(cd stm2rttm; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)
+(cd stmValidator; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)
+(cd rttmValidator; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)
+(cd ctmValidator; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)
+(cd slatreport; sed -e "s:PREFIX=.*:PREFIX=`cd ../..; pwd`:" < makefile.in > makefile)
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+touch sctk/.configured
+cd sctk; \
+	make all && make install && make doc
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+(mkdir -p bin)
+(cd src; make all)
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src'
+(cd asclite; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite'
+(cd core; make all)
+make[4]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/core'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/core'
+(cd test; make all)
+make[4]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/test'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/test'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite'
+(cd sclite; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/sclite'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/sclite'
+(cd rfilter1; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rfilter1'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rfilter1'
+(cd csrfilt; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/csrfilt'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/csrfilt'
+(cd chfilt; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/chfilt'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/chfilt'
+(cd hamzaNorm; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hamzaNorm'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hamzaNorm'
+(cd tanweenFilt; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/tanweenFilt'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/tanweenFilt'
+(cd acomp; make all)	
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/acomp'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/acomp'
+(cd def_art; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/def_art'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/def_art'
+(cd hubscr; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hubscr'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hubscr'
+(cd utf_filt; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/utf_filt'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/utf_filt'
+(cd rttmSort; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSort'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSort'
+(cd rttm2ctm; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttm2ctm'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttm2ctm'
+(cd rttmSmooth; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSmooth'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSmooth'
+(cd spkr2sad; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/spkr2sad'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/spkr2sad'
+(cd mergectm2rttm; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/mergectm2rttm'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/mergectm2rttm'
+(cd align2html; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/align2html'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/align2html'
+(cd md-eval; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/md-eval'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/md-eval'
+(cd stm2rttm; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stm2rttm'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stm2rttm'
+(cd stmValidator; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stmValidator'
+perl buildInstallVersion.pl > stmValidator.pl
+chmod +x stmValidator.pl
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stmValidator'
+(cd rttmValidator; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmValidator'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmValidator'
+(cd ctmValidator; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/ctmValidator'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/ctmValidator'
+(cd slatreport; make all)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/slatreport'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/slatreport'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+(mkdir -p bin)
+(cd src; make install)
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src'
+(cd asclite; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite'
+(cd core; make install)
+make[4]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/core'
+for p in asclite; do \
+		/usr/bin/install $p /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin/$p; \
+	done
+make[4]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/core'
+(cd test; make install)
+make[4]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/test'
+make[4]: Nothing to be done for `install'.
+make[4]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite/test'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/asclite'
+(cd sclite; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/sclite'
+for p in sclite sc_stats rover sctkUnit; do \
+	  /usr/bin/install $p /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin/$p; \
+	done
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/sclite'
+(cd rfilter1; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rfilter1'
+install rfilter1 /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rfilter1'
+(cd csrfilt; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/csrfilt'
+cp csrfilt.sh /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/csrfilt'
+(cd chfilt; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/chfilt'
+cp chfilt.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/chfilt'
+(cd hamzaNorm; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hamzaNorm'
+cp hamzaNorm.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hamzaNorm'
+(cd tanweenFilt; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/tanweenFilt'
+cp tanweenFilt.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/tanweenFilt'
+(cd acomp; make install)	
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/acomp'
+cp acomp.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/acomp'
+(cd def_art; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/def_art'
+cp def_art.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/def_art'
+(cd hubscr; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hubscr'
+cp hubscr.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/hubscr'
+(cd utf_filt; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/utf_filt'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/utf_filt'
+(cd rttmSort; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSort'
+cp rttmSort.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSort'
+(cd rttm2ctm; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttm2ctm'
+cp rttm2ctm.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttm2ctm'
+(cd rttmSmooth; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSmooth'
+cp rttmSmooth.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmSmooth'
+(cd spkr2sad; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/spkr2sad'
+cp spkr2sad.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/spkr2sad'
+(cd mergectm2rttm; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/mergectm2rttm'
+cp mergectm2rttm.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/mergectm2rttm'
+(cd align2html; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/align2html'
+perl buildInstallVersion.pl > /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin/align2html.pl
+chmod +x /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin/align2html.pl
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/align2html'
+(cd md-eval; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/md-eval'
+cp md-eval.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/md-eval'
+(cd stm2rttm; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stm2rttm'
+cp stm2rttm.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stm2rttm'
+(cd stmValidator; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stmValidator'
+perl buildInstallVersion.pl > stmValidator.pl
+chmod +x stmValidator.pl
+perl buildInstallVersion.pl > /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin/stmValidator.pl
+chmod +x /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin/stmValidator.pl
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/stmValidator'
+(cd rttmValidator; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmValidator'
+cp rttmValidator.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/rttmValidator'
+(cd ctmValidator; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/ctmValidator'
+cp ctmValidator.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/ctmValidator'
+(cd slatreport; make install)
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/slatreport'
+cp slatreport.pl /ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk/bin
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src/slatreport'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/src'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+(cd doc; make all)
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/doc'
+for p in align2html asclite ctmValidator mergectm2rttm; do \
+		pod2man $p.pod -o $p.1; \
+		pod2html $p.pod > $p.html; \
+	done 2> /dev/null
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9/doc'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/sctk-2.4.9'
+cd openfst-1.3.4/ && \
+	make install
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4'
+Making install in src
+make[2]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4/src'
+Making install in include
+make[3]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4/src/include'
+make[4]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4/src/include'
+make[4]: Nothing to be done for `install-exec-am'.
+ /bin/mkdir -p '/usr/local/include'
+ /bin/mkdir -p '/usr/local/include/fst'
+ /usr/bin/install -c -m 644  fst/arc.h fst/determinize.h fst/intersect.h fst/queue.h fst/statesort.h fst/arcfilter.h fst/dfs-visit.h fst/invert.h fst/randequivalent.h fst/string-weight.h fst/difference.h fst/lexicographic-weight.h fst/randgen.h fst/symbol-table.h fst/arcsort.h fst/encode.h fst/lock.h fst/random-weight.h fst/synchronize.h fst/epsnormalize.h fst/log.h fst/rational.h fst/test-properties.h fst/cache.h fst/equal.h fst/arc-map.h fst/map.h fst/register.h fst/topsort.h fst/closure.h fst/equivalent.h fst/matcher.h fst/matcher-fst.h fst/relabel.h fst/union-find.h fst/compact-fst.h fst/expanded-fst.h fst/minimize.h fst/replace.h fst/union.h '/usr/local/include/fst'
+make[4]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4/src/include'
+make[3]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4/src/include'
+make[2]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4/src'
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst-1.3.4'

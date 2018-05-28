@@ -1,0 +1,140 @@
+make -C base/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/base'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/base'
+make -C matrix/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/matrix'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/matrix'
+make -C util/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/util'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/util'
+make -C feat/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/feat'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/feat'
+make -C tree/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/tree'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/tree'
+make -C thread/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/thread'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/thread'
+make -C gmm/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/gmm'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/gmm'
+make -C transform/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/transform'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/transform'
+make -C sgmm/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm'
+make -C fstext/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fstext'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fstext'
+make -C hmm/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/hmm'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/hmm'
+make -C lm/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lm'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lm'
+make -C decoder/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/decoder'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -O3 -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/decoder'
+make -C lat/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lat'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lat'
+make -C kws/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/kws'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/kws'
+make -C cudamatrix/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/cudamatrix'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/cudamatrix'
+make -C nnet/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet'
+make -C bin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/bin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/bin'
+make -C fstbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fstbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fstbin'
+make -C gmmbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/gmmbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/gmmbin'
+make -C fgmmbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fgmmbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/fgmmbin'
+make -C sgmmbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmmbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmmbin'
+make -C featbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/featbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/featbin'
+make -C nnetbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnetbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnetbin'
+make -C latbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/latbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/latbin'
+make -C sgmm2/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm2'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm2'
+make -C sgmm2bin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm2bin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/sgmm2bin'
+make -C nnet2/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet2'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet2'
+make -C nnet2bin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet2bin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/nnet2bin'
+make -C kwsbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/kwsbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/kwsbin'
+make -C ivector/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/ivector'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/ivector'
+make -C ivectorbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/ivectorbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/ivectorbin'
+make -C online2/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/online2'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/online2'
+make -C online2bin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/online2bin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include  -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/online2bin'
+make -C lmbin/ depend
+make[1]: Entering directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lmbin'
+g++ -M -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/ATLAS/include -I/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/tools/openfst/include -Wno-sign-compare -g -O0 -DKALDI_PARANOID  -DHAVE_CUDA -I/usr/local/cuda/include  *.cc > .depend.mk  
+make[1]: Leaving directory `/ws/ifp-48_1/hasegawa/amitdas/work/ws15-pt-data/kaldi-trunk/src/lmbin'
